@@ -3,13 +3,13 @@ package grid;
 public interface IGrid<T> {
     /**
      *
-     * @return the amount of rows in the grid.
+     * @return the number of rows in the grid.
      */
     int getRows();
 
     /**
      *
-     * @return the amount of cols in the grid.
+     * @return the number of cols in the grid.
      */
     int getCols();
 
