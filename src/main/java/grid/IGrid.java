@@ -5,13 +5,13 @@ public interface IGrid<T> {
      *
      * @return the number of rows in the grid.
      */
-    int getRows();
+    int numRows();
 
     /**
      *
      * @return the number of cols in the grid.
      */
-    int getCols();
+    int numCols();
 
     /**
      *
@@ -26,6 +26,13 @@ public interface IGrid<T> {
      * @return true if the location is on the grid, false otherwise.
      */
     boolean isOnGrid(Location loc);
+
+    /**
+     *
+     * @param loc The location you want to get somthing from.
+     * @return What's on the given location.
+     */
+    T get(Location loc);
 
 
 }

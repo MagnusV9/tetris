@@ -25,11 +25,11 @@ public class Grid<T> implements IGrid<T>{
     }
 
 
-    public int getRows() {
+    public int numRows() {
         return rows;
     }
 
-    public int getCols() {
+    public int numCols() {
         return cols;
     }
 
@@ -41,6 +41,11 @@ public class Grid<T> implements IGrid<T>{
     public boolean isOnGrid(Location loc) {
         return loc.getCol() < cols && loc.getCol() > 0 &&
                 loc.getRow() < rows && loc.getRow() > 0;
+    }
+
+    @Override
+    public T get(Location loc) {
+        return grid.get(loc.getCol()).get(loc.getRow());
     }
 
     private void fill(ArrayList<ArrayList<T>> toFill, int rows, int cols, T value){
